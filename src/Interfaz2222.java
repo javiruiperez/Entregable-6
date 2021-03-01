@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Interfaz2 extends JFrame {
+public class Interfaz2222 extends JFrame {
 
     JCheckBox c1 = new JCheckBox("Sr.");
     JCheckBox c2 = new JCheckBox("Sra.");
@@ -19,7 +19,7 @@ public class Interfaz2 extends JFrame {
     Color asulitoresulon = new Color(49, 112, 255);
     Color rojitoresulon = new Color(255, 43, 43);
 
-    Interfaz2() {
+    Interfaz2222() {
         setLayout(new FlowLayout());
         JPanel panelPrincipal = new JPanel();
         panelPrincipal.setLayout(new GridLayout(5, 1));
@@ -176,7 +176,7 @@ public class Interfaz2 extends JFrame {
 
     public static void main(String[] args) {
 
-        Interfaz2 i2 = new Interfaz2();
+        Interfaz2222 i2222 = new Interfaz2222();
     }
 
     private class ListenerButton implements ActionListener {
@@ -248,4 +248,5 @@ public class Interfaz2 extends JFrame {
 
         }
     }
+
 }
