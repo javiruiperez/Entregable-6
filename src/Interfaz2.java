@@ -15,7 +15,7 @@ public class Interfaz2 extends JFrame {
     JCheckBox c22 = new JCheckBox("Mujer");
     JCheckBox c33 = new JCheckBox("Otro");
 
-    private JButton Continuar;
+    private JButton Reservar;
     private JButton Volver;
 
     Color asulitoresulon = new Color(49, 112, 255);
@@ -40,7 +40,7 @@ public class Interfaz2 extends JFrame {
         p1.add(c3);
         c1.addActionListener(new ListenerButton());
         c2.addActionListener(new ListenerButton1());
-        c3.addActionListener(new ListenerButton2());
+        c3.addActionListener(new ListenerButton3());
         JLabel vacio1 = new JLabel("");
         vacio1.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p1.add(vacio1);
@@ -158,11 +158,13 @@ public class Interfaz2 extends JFrame {
         Volver = new JButton("VOLVER");
         Volver.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p4.add(Volver);
+        Volver.addActionListener(new ListenerButton3());
         Volver.setBackground(rojitoresulon);
-        Continuar = new JButton("CONTINUAR");
-        Continuar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
-        p4.add(Continuar);
-        Continuar.setBackground(asulitoresulon);
+        Reservar = new JButton("RESERVAR");
+        Reservar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
+        p4.add(Reservar);
+        Reservar.addActionListener(new ListenerButton4());
+        Reservar.setBackground(asulitoresulon);
         JLabel vacio21 = new JLabel("");
         vacio21.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p4.add(vacio21);
@@ -176,7 +178,7 @@ public class Interfaz2 extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void main() {
 
         Interfaz2 i2 = new Interfaz2();
     }
@@ -211,8 +213,22 @@ public class Interfaz2 extends JFrame {
                 c1.setSelected(false);
                 c2.setSelected(false);
             }
+        }
+    }
 
+    private class ListenerButton3 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz.main();
+            dispose();
+        }
+    }
 
+    private class ListenerButton4 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz3.main();
+            dispose();
         }
     }
 

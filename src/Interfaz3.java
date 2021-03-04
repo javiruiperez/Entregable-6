@@ -43,7 +43,7 @@ public class Interfaz3 extends JFrame {
         Ipaypal.setBackground(Color.white);
         Imagen Imagen = new Imagen();
         Ipaypal.add(Imagen);
-        Ipaypal.addActionListener(new Interfaz3.ListenerButton3());
+        Ipaypal.addActionListener(new ListenerButton3());
         JLabel vacio1 = new JLabel("");
         vacio1.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p11.add(vacio1);
@@ -62,7 +62,7 @@ public class Interfaz3 extends JFrame {
         IVisa.setBackground(Color.white);
         Imagen2 Imagen2 = new Imagen2();
         IVisa.add(Imagen2);
-        IVisa.addActionListener(new Interfaz3.ListenerButton4());
+        IVisa.addActionListener(new ListenerButton4());
         JLabel vacio3 = new JLabel("");
         vacio3.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p12.add(vacio3);
@@ -81,7 +81,7 @@ public class Interfaz3 extends JFrame {
         Iventanilla.setBackground(Color.white);
         Imagen3 Imagen3 = new Imagen3();
         Iventanilla.add(Imagen3);
-        Iventanilla.addActionListener(new Interfaz3.ListenerButton5());
+        Iventanilla.addActionListener(new ListenerButton5());
         JLabel vacio5 = new JLabel("");
         vacio5.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p13.add(vacio5);
@@ -99,14 +99,17 @@ public class Interfaz3 extends JFrame {
         Volver = new JButton("VOLVER");
         Volver.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p4.add(Volver);
+        Volver.addActionListener(new Interfaz3.ListenerButton6());
         Volver.setBackground(rojitoresulon);
         Cancelar = new JButton("CANCELAR");
         Cancelar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p4.add(Cancelar);
+        Cancelar.addActionListener(new Interfaz3.ListenerButton7());
         Cancelar.setBackground(rojitoresulon);
         Continuar = new JButton("CONTINUAR");
         Continuar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p4.add(Continuar);
+        Continuar.addActionListener(new Interfaz3.ListenerButton8());
         Continuar.setBackground(asulitoresulon);
         JLabel vacio21 = new JLabel("");
         vacio21.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
@@ -126,7 +129,7 @@ public class Interfaz3 extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void main() {
 
         Interfaz3 i3 = new Interfaz3();
     }
@@ -162,26 +165,43 @@ public class Interfaz3 extends JFrame {
     private class ListenerButton3 implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (Ipaypal.isSelected()) {
                 c1.setSelected(true);
-            }
         }
     }
 
     private class ListenerButton4 implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (IVisa.isSelected()) {
                 c2.setSelected(true);
             }
-        }
     }
     private class ListenerButton5 implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (Iventanilla.isSelected()) {
                 c3.setSelected(true);
             }
+    }
+
+    private class ListenerButton6 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz2.main();
+            dispose();
+        }
+    }
+
+    private class ListenerButton7 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz.main();
+            dispose();
+        }
+    }
+    private class ListenerButton8 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz4.main();
+            dispose();
         }
     }
 }

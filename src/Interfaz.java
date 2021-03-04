@@ -101,10 +101,12 @@ public class Interfaz extends JFrame {
         Cancelar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         Cancelar.setPreferredSize(new Dimension(100, 50));
         p5.add(Cancelar);
+        Cancelar.addActionListener(new ListenerButton2());
         Cancelar.setBackground(rojitoresulon);
         Continuar = new JButton("CONTINUAR");
         Continuar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p5.add(Continuar);
+        Continuar.addActionListener(new ListenerButton3());
         Continuar.setBackground(asulitoresulon);
         JLabel vacio7 = new JLabel("");
         vacio7.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
@@ -119,7 +121,7 @@ public class Interfaz extends JFrame {
         setVisible(true);
 
     }
-    public static void main(String[] args) {
+    public static void main() {
 
         Interfaz i = new Interfaz();
     }
@@ -141,6 +143,22 @@ public class Interfaz extends JFrame {
             }
 
 
+        }
+    }
+
+    private class ListenerButton2 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz.main();
+            dispose();
+        }
+    }
+
+    private class ListenerButton3 implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Interfaz2.main();
+            dispose();
         }
     }
 }
