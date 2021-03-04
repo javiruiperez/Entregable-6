@@ -45,7 +45,7 @@ public class Interfaz2 extends JFrame {
         panelPrincipal.add(p1);
 
         JPanel p2 = new JPanel();
-        p2.setLayout(new GridLayout(6,4, 50,0));
+        p2.setLayout(new GridLayout(6,4, 10,0));
         JLabel l3 = new JLabel("Nombre");
         l3.setFont(new Font("Comic Sans Ms", Font.PLAIN, 18));
         p2.add(l3);
@@ -115,7 +115,7 @@ public class Interfaz2 extends JFrame {
 
 
         JPanel p3 = new JPanel();
-        p3.setLayout(new GridLayout(3,4, 50,0));
+        p3.setLayout(new GridLayout(3,4, 10,0));
         JLabel l8 = new JLabel("Informacion del Pasaporte");
         l8.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p3.add(l8);
@@ -152,7 +152,7 @@ public class Interfaz2 extends JFrame {
         p3.add(vacio20);
         panelPrincipal.add(p3);
 
-        JPanel p4 = new JPanel(new GridLayout(2, 2, 850, 0));
+        JPanel p4 = new JPanel(new GridLayout(2, 2, 900, 75));
         Volver = new JButton("VOLVER");
         Volver.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p4.add(Volver);

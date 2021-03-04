@@ -7,18 +7,26 @@ public class Interfaz extends JFrame {
 
     SpinnerModel numCaracteres = new SpinnerNumberModel(1, 1, 10, 1);
     JSpinner spin1;
+
     private JButton Continuar;
     private JButton Cancelar;
+
     JCheckBox c1 = new JCheckBox("TURISTA");
     JCheckBox c2 = new JCheckBox("BUSSINESS");
+
+    Color asulitoresulon = new Color(49, 112, 255);
+    Color rojitoresulon = new Color(255, 43, 43);
 
     Interfaz(){
         setLayout(new FlowLayout());
         JPanel panelPrincipal = new JPanel();
-        panelPrincipal.setLayout(new GridLayout(6, 1));
+        panelPrincipal.setLayout(new GridLayout(7, 1));
         JLabel l1 = new JLabel("Seleccione su lugar de destino y de salida");
         l1.setFont(new Font("Comic Sans Ms", Font.PLAIN, 40));
         panelPrincipal.add(l1);
+        JLabel vacio01 = new JLabel("");
+        vacio01.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        panelPrincipal.add(vacio01);
 
 
         JPanel p1 = new JPanel(new GridLayout(3, 2, 50, 0));
@@ -85,17 +93,23 @@ public class Interfaz extends JFrame {
         c2.addActionListener(new ListenerButton1());
         panelPrincipal.add(p4);
 
-        JPanel p5 = new JPanel(new GridLayout(1, 2, 550, 0));
+        JPanel p5 = new JPanel(new GridLayout(2, 2, 900, 5));
         panelPrincipal.add(p5);
         Cancelar = new JButton("CANCELAR");
         Cancelar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         Cancelar.setPreferredSize(new Dimension(100, 50));
         p5.add(Cancelar);
-        Cancelar.setBackground(Color.RED);
+        Cancelar.setBackground(rojitoresulon);
         Continuar = new JButton("CONTINUAR");
         Continuar.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p5.add(Continuar);
-        Continuar.setBackground(Color.GREEN);
+        Continuar.setBackground(asulitoresulon);
+        JLabel vacio7 = new JLabel("");
+        vacio7.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p5.add(vacio7);
+        JLabel vacio8 = new JLabel("");
+        vacio8.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p5.add(vacio8);
 
 
         add(panelPrincipal);
