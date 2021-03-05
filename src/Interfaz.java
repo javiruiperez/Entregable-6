@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 
 public class Interfaz extends JFrame {
 
-    SpinnerModel numCaracteres = new SpinnerNumberModel(1, 1, 10, 1);
-    JSpinner spin1;
+    SpinnerModel numCaracteres = new SpinnerNumberModel(1, 1, 5, 1);
+    JSpinner spin;
 
     private JButton Continuar;
     private JButton Cancelar;
@@ -19,7 +19,7 @@ public class Interfaz extends JFrame {
     Color asulitoresulon = new Color(49, 112, 255);
     Color rojitoresulon = new Color(255, 43, 43);
 
-    Interfaz(){
+    Interfaz() {
         setLayout(new FlowLayout());
         JPanel panelPrincipal = new JPanel();
         panelPrincipal.setLayout(new GridLayout(7, 1));
@@ -33,7 +33,8 @@ public class Interfaz extends JFrame {
 
         JPanel p1 = new JPanel(new GridLayout(3, 2, 50, 0));
         JLabel l2 = new JLabel("Lugar de destino");
-        l2.setFont(new Font("Comic Sans Ms", Font.PLAIN, 18));;
+        l2.setFont(new Font("Comic Sans Ms", Font.PLAIN, 18));
+        ;
         p1.add(l2);
         JLabel l3 = new JLabel("Lugar de salida");
         l3.setFont(new Font("Comic Sans Ms", Font.PLAIN, 18));
@@ -73,8 +74,8 @@ public class Interfaz extends JFrame {
         JLabel l6 = new JLabel("Pasajeros");
         l6.setFont(new Font("Comic Sans Ms", Font.PLAIN, 18));
         p3.add(l6);
-        spin1 = new JSpinner(numCaracteres);
-        p3.add(spin1);
+        spin = new JSpinner(numCaracteres);
+        p3.add(spin);
         JLabel vacio5 = new JLabel("");
         vacio5.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p3.add(vacio5);
@@ -121,10 +122,12 @@ public class Interfaz extends JFrame {
         setVisible(true);
 
     }
+
     public static void main() {
 
         Interfaz i = new Interfaz();
     }
+
     private class ListenerButton implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -135,6 +138,7 @@ public class Interfaz extends JFrame {
 
         }
     }
+
     private class ListenerButton1 implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {

@@ -25,10 +25,11 @@ public class Interfaz3 extends JFrame {
     Interfaz3(){
         setLayout(new FlowLayout());
         JPanel panelPrincipal = new JPanel();
-        panelPrincipal.setLayout(new GridLayout(3, 1));
+        panelPrincipal.setLayout(new GridLayout(4, 1));
         JLabel l1 = new JLabel("Seleccione Método De Pago");
         l1.setFont(new Font("Comic Sans Ms", Font.PLAIN, 40));
         panelPrincipal.add(l1);
+
 
 
         JPanel p1 = new JPanel();
@@ -36,7 +37,7 @@ public class Interfaz3 extends JFrame {
 
 
         JPanel p11 = new JPanel();
-        p11.setLayout(new GridLayout(2,2, 1000, 0));
+        p11.setLayout(new GridLayout(2,3, 400, 0));
         Ipaypal = new JButton();
         Ipaypal.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p11.add(Ipaypal);
@@ -44,18 +45,26 @@ public class Interfaz3 extends JFrame {
         Imagen Imagen = new Imagen();
         Ipaypal.add(Imagen);
         Ipaypal.addActionListener(new ListenerButton3());
-        JLabel vacio1 = new JLabel("");
-        vacio1.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
-        p11.add(vacio1);
+        JLabel Precio = new JLabel("");
+        Precio.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
+        p11.add(Precio);
+        JLabel vacio02 = new JLabel("");
+        vacio02.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p11.add(vacio02);
+        p1.add(p11);
         p11.add(c1);
         c1.addActionListener(new Interfaz3.ListenerButton());
         JLabel vacio2 = new JLabel("");
         vacio2.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p11.add(vacio2);
+        JLabel vacio03 = new JLabel("");
+        vacio03.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p11.add(vacio03);
+        p1.add(p11);
         p1.add(p11);
 
         JPanel p12 = new JPanel();
-        p12.setLayout(new GridLayout(2,2, 1000, 0));
+        p12.setLayout(new GridLayout(2,3, 400, 0));
         IVisa = new JButton();
         IVisa.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p12.add(IVisa);
@@ -66,15 +75,22 @@ public class Interfaz3 extends JFrame {
         JLabel vacio3 = new JLabel("");
         vacio3.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p12.add(vacio3);
+        JLabel vacio04 = new JLabel("");
+        vacio04.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p12.add(vacio04);
+        p1.add(p11);
         p12.add(c2);
         c2.addActionListener(new Interfaz3.ListenerButton1());
         JLabel vacio4 = new JLabel("");
         vacio4.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p12.add(vacio4);
+        JLabel vacio05 = new JLabel("");
+        vacio05.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p12.add(vacio05);
         p1.add(p12);
 
         JPanel p13 = new JPanel();
-        p13.setLayout(new GridLayout(2,2, 1000, 0));
+        p13.setLayout(new GridLayout(2,3, 400, 0));
         Iventanilla = new JButton();
         Iventanilla.setFont(new Font("Comic Sans Ms", Font.PLAIN, 25));
         p13.add(Iventanilla);
@@ -82,6 +98,9 @@ public class Interfaz3 extends JFrame {
         Imagen3 Imagen3 = new Imagen3();
         Iventanilla.add(Imagen3);
         Iventanilla.addActionListener(new ListenerButton5());
+        JLabel vacio06 = new JLabel("");
+        vacio06.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p13.add(vacio06);
         JLabel vacio5 = new JLabel("");
         vacio5.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p13.add(vacio5);
@@ -90,6 +109,9 @@ public class Interfaz3 extends JFrame {
         JLabel vacio6 = new JLabel("");
         vacio6.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
         p13.add(vacio6);
+        JLabel vacio07 = new JLabel("");
+        vacio07.setFont(new Font("Comic Sans Ms", Font.PLAIN, 1));
+        p13.add(vacio07);
         p1.add(p13);
         panelPrincipal.add(p1);
 
